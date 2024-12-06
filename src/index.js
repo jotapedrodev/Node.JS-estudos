@@ -1,19 +1,27 @@
 
 const fs = require('fs');
+const trataErros = require('./erros/funcoesErro.js')
 const caminhoArquivo = process.argv;
 const link = caminhoArquivo[2];
+
 fs.readFile(link, 'utf-8', (error, texto) => {
-    quebraParagrafos(texto);
-    //verificaPalavaraDuplicada(texto);
+    try{
+        if(error) throw error
+       contarPalavras(texto); 
+    }catch(error){
+        trataErros(error);
+    }
 });
 
 function contarPalavras(texto){
+    const paragrafos = extraiParagrafos(texto)
     const contagem = paragrafos.flatMap((paragrafo) => {
         if (!paragrafo) return [];
         return verificaPalavaraDuplicada(paragrafo);
     })
 console.log (contagem)
 }
+
 function extraiParagrafos(texto){
     return texto.toLowerCase().split('\n');
 }
