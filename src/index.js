@@ -7,14 +7,17 @@ fs.readFile(link, 'utf-8', (error, texto) => {
     //verificaPalavaraDuplicada(texto);
 });
 
-function quebraParagrafos(texto) {
-    const paragrafos = texto.toLowerCase().split('\n');
+function contarPalavras(texto){
     const contagem = paragrafos.flatMap((paragrafo) => {
         if (!paragrafo) return [];
         return verificaPalavaraDuplicada(paragrafo);
     })
 console.log (contagem)
 }
+function extraiParagrafos(texto){
+    return texto.toLowerCase().split('\n');
+}
+
 
 function limpaPalavras(palavra) {
     return palavra.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
