@@ -4,7 +4,7 @@ export function contarPalavras(texto){
         if (!paragrafo) return [];
         return verificaPalavaraDuplicada(paragrafo);
     })
-console.log (contagem)
+return contagem;
 }
 
 function extraiParagrafos(texto){
