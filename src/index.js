@@ -1,4 +1,4 @@
-function contarPalavras(texto){
+export function contarPalavras(texto){
     const paragrafos = extraiParagrafos(texto)
     const contagem = paragrafos.flatMap((paragrafo) => {
         if (!paragrafo) return [];
