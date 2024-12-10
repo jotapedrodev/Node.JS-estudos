@@ -1,4 +1,4 @@
-# Node.JS Estudos
+# Node.JS Estudos 💻
 
 Bem-vindo ao repositório **Node.JS Estudos**! Este repositório foi criado com o objetivo de reunir códigos e exemplos que ilustram conceitos e funcionalidades do Node.js, proporcionando uma base de aprendizado para iniciantes e intermediários na tecnologia.
 
