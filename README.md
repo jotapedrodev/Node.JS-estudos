@@ -15,8 +15,8 @@ O objetivo é demonstrar práticas de manipulação de arquivos e processamento 
 ## Linguagem e Bibliotecas Utilizadas
 
 - **Linguagem:**
-  - JavaScript ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
-  - Node.js ![Node.js Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
+  - JavaScript <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="50">
+  - Node.js <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo" width="50">
 
 - **Frameworks e Bibliotecas:**
   - `fs`: Para manipulação de arquivos.
@@ -39,5 +39,6 @@ Contribuições são bem-vindas! Se você tiver uma ideia, correção ou sugest�
 Para dúvidas ou sugestões, entre em contato:
 
 - GitHub: [jotapedrodev](https://github.com/jotapedrodev)
+
 
 
