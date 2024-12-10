@@ -1,4 +1,5 @@
 import fs from 'fs'
+import path from 'path'
 import trataErros from './erros/funcoesErro.js';
 import { contarPalavras } from './index.js';
 import { montaSaidaArquivo } from './helpers.js';
@@ -17,21 +18,28 @@ program
         program.help();
         return;
     }
-})
-
-const caminhoArquivo = process.argv;
-const link = caminhoArquivo[2];
-const endereco = caminhoArquivo[3];
-
-fs.readFile(link, 'utf-8', (error, texto) => {
+const caminhoTexto = path.resolve(texto);
+const caminhoDestino = path.resolve(destino);
     try{
-        if(error) throw error
-       const restulado = contarPalavras(texto); 
-       criaESalvaArquivo(restulado, endereco)
-    }catch(error){
-        trataErros(error);
-    }
-});
+processaArquivo(caminhoTexto, caminhoDestino)
+console.log('texto processado com sucesso')
+    }catch(erro){ 
+        console.log('ocorreu um erro no processamento', erro);}
+})
+program.parse();
+
+
+function processaArquivo(texto, destino){
+    fs.readFile(texto, 'utf-8', (error, texto) => {
+        try{
+            if(error) throw error
+           const restulado = contarPalavras(texto); 
+           criaESalvaArquivo(restulado, destino)
+        }catch(error){
+            trataErros(error);
+        }
+    });
+}
 
 
 async function criaESalvaArquivo(listaPalavra, endereco){
